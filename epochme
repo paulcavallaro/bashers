@@ -1,0 +1,10 @@
+#!/bin/bash
+if [[ $# -eq 0 ]]; then
+    echo "Seconds since epoch: "
+    date +%s
+else
+    echo "If seconds from epoch: "
+    date -r $1;
+    echo "If milliseconds from epoch: "
+    date -r $(($1/1000));
+fi
